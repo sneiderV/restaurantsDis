@@ -1,0 +1,95 @@
+[
+{
+  "nombre": "Randys",
+  "descripcion": "Deliciosas hamburguesas",
+  "image_url": "",
+  "calificacion": 4.1,
+  "tipo_restaurante": "gourmet",
+  "comentarios": [
+    "Muy rico",
+    "Ricas pero me dieron hemorroides"
+  ],
+  "tipo_comida": [
+    "Hamburguesas",
+    "Perros Calientes"
+  ],
+  "descuentos": [
+    {
+      "precio": 15000,
+      "descripcion": "2x1 en Combo Randys",
+      "terminos_condiciones": "solo de lunes a jueves",
+      "fecha_vigencia": "2018-04-21T00:00:00.000Z",
+      "sector": "la candelaria"
+    },
+    {
+      "precio": 20000,
+      "descripcion": "3 porciones de papas, 2 gaseosas 7Oz, 1 hamburguesa doble carne",
+      "terminos_condiciones": "",
+      "fecha_vigencia": "2018-04-21T00:00:00.000Z",
+      "sector": "la candelaria"
+    }
+  ]
+},
+{
+  "nombre": "Randys1",
+  "descripcion": "Deliciosas hamburguesas",
+  "image_url": "",
+  "calificacion": 4.1,
+  "tipo_restaurante": "gourmet",
+  "comentarios": [
+    "Muy rico",
+    "Ricas pero me dieron hemorroides"
+  ],
+  "tipo_comida": [
+    "Hamburguesas",
+    "Perros Calientes"
+  ],
+  "descuentos": [
+    {
+      "precio": 15000,
+      "descripcion": "2x1 en Combo Randys",
+      "terminos_condiciones": "solo de lunes a jueves",
+      "fecha_vigencia": "2018-04-21T00:00:00.000Z",
+      "sector": "la candelaria"
+    },
+    {
+      "precio": 20000,
+      "descripcion": "3 porciones de papas, 2 gaseosas 7Oz, 1 hamburguesa doble carne",
+      "terminos_condiciones": "",
+      "fecha_vigencia": "2018-04-21T00:00:00.000Z",
+      "sector": "la candelaria"
+    }
+  ]
+},
+{
+  "nombre": "Randys2",
+  "descripcion": "Deliciosas hamburguesas",
+  "image_url": "",
+  "calificacion": 4.1,
+  "tipo_restaurante": "gourmet",
+  "comentarios": [
+    "Muy rico",
+    "Ricas pero me dieron hemorroides"
+  ],
+  "tipo_comida": [
+    "Hamburguesas",
+    "Perros Calientes"
+  ],
+  "descuentos": [
+    {
+      "precio": 15000,
+      "descripcion": "2x1 en Combo Randys",
+      "terminos_condiciones": "solo de lunes a jueves",
+      "fecha_vigencia": "2018-04-21T00:00:00.000Z",
+      "sector": "la candelaria"
+    },
+    {
+      "precio": 20000,
+      "descripcion": "3 porciones de papas, 2 gaseosas 7Oz, 1 hamburguesa doble carne",
+      "terminos_condiciones": "",
+      "fecha_vigencia": "2018-04-21T00:00:00.000Z",
+      "sector": "la candelaria"
+    }
+  ]
+}
+]
