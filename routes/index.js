@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var mongodb =require("mongodb");
 
-var url = "mongodb://localhost:27017/mongo_restaurantes";
+//var url = "mongodb://localhost:27017/mongo_restaurantes";
+var url = process.env.MONGODB||"mongodb://localhost:27017/mongo_restaurantes";
 function getRestaurantes(callBack){
 	mongodb.connect(url, (err, dbm)=>{
 		if(err) throw err;
