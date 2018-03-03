@@ -1,47 +1,86 @@
 import React, {Component} from "react";
-import TwitterList from "./TwitterList.js";
+import RestauranteList from "./RestauranteList.js";
 import SearchBox from "./SearchBox.js"
 class App extends Component{
   constructor(props){
     super(props);
     this.state ={
-      tweets:[],
-      search : ""
+      restaurantes:[],
+      searchName : "",
+      searchTypeR: "",
+      searchTypeF: "",
+      searchCalifi: "" 
     }
   }
 
   componentDidMount(){
-    fetch("/tweets",{method:"GET", headers:{accept:"application/json"}})
-      .then((res)=>{
-        if(res.ok)
-          return res.json();
-      })
-      .then((_tweets)=>{
-        this.setState({
-          tweets: _tweets
-        });
+    fetch("/restaurantes",{method:"GET", headers:{accept:"application/json"}})
+    .then((res)=>{
+      if(res.ok)
+        return res.json();
+    })
+    .then((_restaurantes)=>{
+      this.setState({
+        restaurantes: _restaurantes
       });
-  }
+      console.log("restaurantes " + this.state.restaurantes);
 
-  search(text){
-    this.setState ({
-      search : text
     });
   }
 
-  render(){
-    return( <div> 
-      <h1>Tweets</h1>
-      <div>
-        <SearchBox search={this.search.bind(this)}/>
-      </div>
-
-      <TwitterList tweets={this.state.tweets.filter((t)=>{
-        return t.text.startsWith(this.state.search);
-      })}/>
-
-    </div>);
+  searchName(_name){
+    this.setState ({
+      searchName : _name
+    });
   }
-}
+  searchTypeR(_type){
+    this.setState ({
+      searchTypeR : _type
+    });
+  }
+  searchTypeF(_type){
+    this.setState ({
+      searchTypeF : _type
+    });
+  }
+  searchCalifi(_type){
+    this.setState({
+      searchCalifi: _type
+    })
+  }
+  compareGrade(jsonGrade, stateGrade){
+    if(stateGrade === "") return true;
+    else{
+      return jsonGrade===stateGrade;
+    }
+  }
+  render(){
+    return( 
+      <div> 
+        <center><h1>ResDiscounts</h1></center>
+        <div>
+          <SearchBox searchName={this.searchName.bind(this)} 
+                    searchTypeR={this.searchTypeR.bind(this)}
+                    searchTypeF={this.searchTypeF.bind(this)}
+                    searchCalifi={this.searchCalifi.bind(this)} />
+        </div>
 
-export default App;
+        <RestauranteList restaurantes={ this.state.restaurantes
+          .filter( (r)=>{return r.nombre.toUpperCase()
+                            .startsWith(this.state.searchName.toUpperCase());} )
+          .filter( (re)=>{return re.tipo_restaurante.toUpperCase()
+                            .includes(this.state.searchTypeR.toUpperCase());} )
+          .filter( (res)=>{return res.tipo_comida.toUpperCase()
+                            .includes(this.state.searchTypeF.toUpperCase()); } )
+          .filter( (res)=>{return this.compareGrade(res.calificacion.toString().toUpperCase(),
+                              this.state.searchCalifi.toUpperCase()); } )
+        }/>
+
+      </div>);
+    }
+  }
+
+  export default App;
+
+
+  

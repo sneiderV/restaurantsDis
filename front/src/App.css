@@ -1,0 +1,35 @@
+p {
+	color: black;
+	text-align: center;
+}
+h5 {
+	color: black;
+	font-weight: bold;
+}
+h6 {
+	text-align: center;
+}
+p.calificacion {
+	color: red;
+}
+.cuadroRestaurante {
+	background-color: #80cbc4 ;
+	box-shadow: 5px 5px 2px grey;
+	width: 98%;
+}
+
+.cuadroDescuentos {
+	background-color: #78909c ;
+	box-shadow: 5px 5px 2px grey;
+	width: 98%;
+}
+.imagen{
+	/*define el tamaño del circulo*/
+    height: 100px;
+    width: 100px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
