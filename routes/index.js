@@ -3,7 +3,7 @@ var router = express.Router();
 var mongodb =require("mongodb");
 
 //var url = "mongodb://localhost:27017/mongo_restaurantes";
-var url = process.env.MONGODB||"mongodb://localhost:27017/mongo_restaurantes";
+var url = process.env.MONGODB||"mongodb://localhost:27017/heroku_pw509l3r";
 function getRestaurantes(callBack){
 	mongodb.connect(url, (err, dbm)=>{
 		if(err) throw err;
@@ -55,6 +55,7 @@ function postLike(_nombre){
 
 // 		var x =mydb.collection("restaurantes").findOne(myquery, { calificacion: 1}, function(err, res) {
 // 			if (err) throw err;
+// 			console.log(res);
 // 		console.log("dentro de findOne ");
 // 			dbm.close();
 // 		})

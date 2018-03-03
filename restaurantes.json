@@ -1,110 +1,109 @@
 [
-	{
-		"nombre": "Randys",
-		"descripcion": "Deliciosas hamburguesas",
-		"image_url": "",
-		"calificacion": 4.1,
-		"tipo_restaurante": "gourmet",
-		"comentarios": [
-			"Muy rico",
-			"Ricas pero me dieron hemorroides"
-		],
-		"tipo_comida": "Hamburguesas, Perros Calientes",
-		"descuentos": [
-			{
-				"precio": 15000,
-				"descripcion": "2x1 en Combo Randys",
-				"terminos_condiciones": "solo de lunes a jueves",
-				"fecha_vigencia": "2018-04-21T00:00:00.000Z",
-				"sector": "la candelaria"
-			},
-			{
-				"precio": 20000,
-				"descripcion": "3 porciones de papas, 2 gaseosas 7Oz, 1 hamburguesa doble carne",
-				"terminos_condiciones": "",
-				"fecha_vigencia": "2018-04-21T00:00:00.000Z",
-				"sector": "la candelaria"
-			}
-		]
-	},
-	{
-		"nombre": "Buffallo Wings",
-		"descripcion": "Franquicia de alitas",
-		"image_url": "",
-		"calificacion": 4.9,
-		"tipo_restaurante": "Comida rapida",
-		"comentarios": [
-			"Buenas promociones a muy buen precio",
-			"Recomendado en happy hour"
-		],
-		"tipo_comida": "Alitas,Papas,Yucas",
-		"descuentos": [
-			{
-				"precio": 22000,
-				"descripcion": "15 alitas con dos gaseosas",
-				"terminos_condiciones": "No acumulable con otras promociones",
-				"fecha_vigencia": "2018-03-20T00:00:00.000Z",
-				"sector": "cedritos"
-			},
-			{
-				"precio": 10000,
-				"descripcion": "10 alitas con papas",
-				"terminos_condiciones": "No acumulable con otras promociones",
-				"fecha_vigencia": "2018-05-15T00:00:00.000Z",
-				"sector": "la candelaria"
-			}
-		]
-	},
-	{
-		"nombre": "McDonalds",
-		"descripcion": "Hamburguesas, nuggets, almuerzos y helados",
-		"image_url": "",
-		"calificacion": 3.5,
-		"tipo_restaurante": "comida rapida",
-		"comentarios": [
-			"Atienden muy lento",
-			"Buenos precios",
-			"Cumple lo que promete",
-			"dan muchos descuentos"
-		],
-		"tipo_comida": 
-			"Hamburguesas, Pollo, Helados",
-		"descuentos": [
-			{
-				"precio": 10000,
-				"descripcion": "McPollo en combo",
-				"terminos_condiciones": "solo de lunes a jueves",
-				"fecha_vigencia": "2018-05-12T00:00:00.000Z",
-				"sector": "la candelaria"
-			},
-			{
-				"precio": 11000,
-				"descripcion": "20 McNuggets",
-				"terminos_condiciones": "presentando aplicación de McDonalds",
-				"fecha_vigencia": "2018-03-15T00:00:00.000Z",
-				"sector": "teusaquillo"
-			}
-		]
-	},
-	{
-		"nombre": "Gauchos",
-		"descripcion": "Hamburguesas caseras",
-		"image_url": "",
-		"calificacion": 4.0,
-		"tipo_restaurante": "gourmet",
-		"comentarios": [
-			"muy caro",
-			"hamburguesa doble es deliciosa"
-		],
-		"tipo_comida": "Hamburguesa, limonada",
-		"descuentos": [
-			{
-				"precio": 9000,
-				"descripcion": "hamburguesa sencilla",
-				"terminos_condiciones": "solo el martes",
-				"fecha_vigencia": "2018-05-12T00:00:00.000Z",
-				"sector": "la candelaria"
-			}
-		]
-	}
+  {
+    "calificacion": 0,
+    "comentarios": [
+      "Muy rico",
+      "Ricas pero me dieron hemorroides"
+    ],
+    "descripcion": "Deliciosas hamburguesas",
+    "descuentos": [
+      {
+        "descripcion": "2x1 en Combo Randys",
+        "fecha_vigencia": "2018-04-21T00:00:00.000Z",
+        "precio": 15000,
+        "sector": "la candelaria",
+        "terminos_condiciones": "solo de lunes a jueves"
+      },
+      {
+        "descripcion": "3 porciones de papas, 2 gaseosas 7Oz, 1 hamburguesa doble carne",
+        "fecha_vigencia": "2018-04-21T00:00:00.000Z",
+        "precio": 20000,
+        "sector": "la candelaria",
+        "terminos_condiciones": ""
+      }
+    ],
+    "image_url": "/randyslogo.png",
+    "nombre": "Randys",
+    "tipo_comida": "Hamburguesas, Perros Calientes",
+    "tipo_restaurante": "gourmet"
+  },
+  {
+    "calificacion": 0,
+    "comentarios": [
+      "Atienden muy lento",
+      "Buenos precios",
+      "Cumple lo que promete",
+      "dan muchos descuentos"
+    ],
+    "descripcion": "Hamburguesas, nuggets, almuerzos y helados",
+    "descuentos": [
+      {
+        "descripcion": "McPollo en combo",
+        "fecha_vigencia": "2018-05-12T00:00:00.000Z",
+        "precio": 10000,
+        "sector": "la candelaria",
+        "terminos_condiciones": "solo de lunes a jueves"
+      },
+      {
+        "descripcion": "20 McNuggets",
+        "fecha_vigencia": "2018-03-15T00:00:00.000Z",
+        "precio": 11000,
+        "sector": "teusaquillo",
+        "terminos_condiciones": "presentando aplicación de McDonalds"
+      }
+    ],
+    "image_url": "/mcdonaldslogo.png",
+    "nombre": "McDonalds",
+    "tipo_comida": "Hamburguesas, Pollo, Helados",
+    "tipo_restaurante": "comida rapida"
+  },
+  {
+    "calificacion": 0,
+    "comentarios": [
+      "Buenas promociones a muy buen precio",
+      "Recomendado en happy hour"
+    ],
+    "descripcion": "Franquicia de alitas",
+    "descuentos": [
+      {
+        "descripcion": "15 alitas con dos gaseosas",
+        "fecha_vigencia": "2018-03-20T00:00:00.000Z",
+        "precio": 22000,
+        "sector": "cedritos",
+        "terminos_condiciones": "No acumulable con otras promociones"
+      },
+      {
+        "descripcion": "10 alitas con papas",
+        "fecha_vigencia": "2018-05-15T00:00:00.000Z",
+        "precio": 10000,
+        "sector": "la candelaria",
+        "terminos_condiciones": "No acumulable con otras promociones"
+      }
+    ],
+    "image_url": "/buffalowingslogo.png",
+    "nombre": "Buffallo Wings",
+    "tipo_comida": "Alitas,Papas,Yucas",
+    "tipo_restaurante": "Comida rapida"
+  },
+  {
+    "calificacion": 7,
+    "comentarios": [
+      "muy caro",
+      "hamburguesa doble es deliciosa"
+    ],
+    "descripcion": "Hamburguesas caseras",
+    "descuentos": [
+      {
+        "descripcion": "hamburguesa sencilla",
+        "fecha_vigencia": "2018-05-12T00:00:00.000Z",
+        "precio": 9000,
+        "sector": "la candelaria",
+        "terminos_condiciones": "solo el martes"
+      }
+    ],
+    "image_url": "/gauchoslogo.png",
+    "nombre": "Gauchos",
+    "tipo_comida": "Hamburguesa, limonada",
+    "tipo_restaurante": "gourmet"
+  }
 ]
