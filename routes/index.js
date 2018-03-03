@@ -9,7 +9,8 @@ function getRestaurantes(callBack){
 		if(err) throw err;
 
 		// ESTO NO FUNCIONA PARA MONGO > VERSION 3.0  var tweets =  dbm.collection("tweets");
-		const mydb = dbm.db("mongo_restaurantes");
+		// const mydb = dbm.db("mongo_restaurantes");
+		const mydb = dbm.db("heroku_pw509l3r");
 		var restaurantes = mydb.collection("restaurantes");
 
 
@@ -27,7 +28,8 @@ function postLike(_nombre){
 	mongodb.connect(url, function(err, dbm) {
 		if (err) throw err;
 
-		const mydb = dbm.db("mongo_restaurantes");
+		// const mydb = dbm.db("mongo_restaurantes");
+		const mydb = dbm.db("heroku_pw509l3r");
 
 		var myquery = { nombre: _nombre };
 		var incLike = { $inc: {calificacion:1} };
