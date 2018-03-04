@@ -1,7 +1,12 @@
 ## ResDiscounts
 Este es el segundo proyecto del curso Desarrollo Web de la Universidad de Los Andes.
-Este fue desarrollado usando las siguientes tecnologías: MongoDB, React, JavaScript, CSS, Bootstrap, Heroku. 
-
+Este fue desarrollado usando las siguientes tecnologías: 
+**Servidor Público**
+Heroku.
+**Back End**
+MongoDB, Nodejs, Expressjs, JavaScript. 
+**Front End**
+React, JavaScript, CSS, Bootstrap, [Material design for Bootstrap](https://fezvrasta.github.io/bootstrap-material-design/)
 ### Despliegue
 Si desea mirar el estado actual de nuestra aplicación, solo necesita abrir en su navegador favorito la siguiente URL: https://restaurantsdis.herokuapp.com/ , pero si usted prefiere descargar nuestro proyecto, debe ejecutar los siguientes comandos: 
 * En el directorio raíz del proyecto 
