@@ -53,7 +53,7 @@ class Restaurante extends Component{
 					<div class="col-sm-1"></div>	
 					<div class="col-sm">
 						<p>Danos un like
-						<fieldset disabled><button type="button" class="btn btn-danger bmd-btn-fab"onClick={this.alerta.bind(this)}>
+						<fieldset enabled><button type="button" class="btn btn-danger bmd-btn-fab"onClick={this.alerta.bind(this)}>
 						 							<img src="/like.png" alt="logito"/>
 						 					</button>
 						 </fieldset> 
