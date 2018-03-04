@@ -2,15 +2,16 @@
 Este es el segundo proyecto del curso Desarrollo Web de la Universidad de Los Andes.
 Este fue desarrollado usando las siguientes tecnologías: MongoDB, React, JavaScript, CSS, Bootstrap, Heroku. 
 
-###Despliegue
+### Despliegue
 Si desea mirar el estado actual de nuestra aplicación, solo necesita abrir en su navegador favorito la siguiente URL: https://restaurantsdis.herokuapp.com/ , pero si usted prefiere descargar nuestro proyecto, debe ejecutar los siguientes comandos: 
 * En el directorio raíz del proyecto 
-  >npm i 
+  > npm i 
 * En el directorio /front
-  >npm i  
+  > npm i  
+  
 nota: Recuerde que estamos usando una base de datos en Mongo, entonces debe contar con MongoDB en su equipo e importar el archivo restaurantes.json a una nueva base de datos en su equipo.
 
-###Las imagenes que se usan en la aplicacion fueron tomados de los siguientes lugares:
+### Las imagenes que se usan en la aplicacion fueron tomados de los siguientes lugares:
 [WOK](https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/012016/untitled-1_276.png?itok=e_I4R6eC)
 [El Corral](http://www.brandemia.org/sites/default/files/sites/default/files/logo_el_corral_nuevo.jpg)
 [Sandwich QBano](http://cosmocentro.com/wp-content/uploads/2016/07/logo-sandwich-qbano.jpg)
@@ -25,9 +26,9 @@ nota: Recuerde que estamos usando una base de datos en Mongo, entonces debe cont
 [Gauchos](https://scontent.feoh3-1.fna.fbcdn.net/v/t1.0-9/20993025_1989773664635154_3400285524563810801_n.png?_nc_eui2=v1%3AAeHCHyEFNKtBd57BhlLxWEbrzoNlh2xS6TFnGG5k_Z4wklypVZYU5bjhIWTSn7ZwYTAG9NFw68INL8naFyZistcCAtrp5Cs1ZONqwL7pTrvGHA&oh=e59129cefde63954b17ff065b1fb2436&oe=5B026499)
 [like](https://www.flaticon.com/authors/gregor-cresnar)
 
-###Licencia
+### Licencia
 Este proyecto cuenta con la licencia estándar [MIT license](https://github.com/sneiderV/restaurantsDis/blob/master/LICENSE)  
 
-###Autores
+### Autores
 Fabio Lopez
 Esneider Velandia
