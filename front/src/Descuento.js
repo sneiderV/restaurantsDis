@@ -10,7 +10,10 @@ class Descuento extends Component{
 	render(){
 		return(
 		<div>
-			<div class="cuadroDescuentos"> 
+			/*
+Tomas Venegas: esto les generará un error cambiar class por className
+ */
+			<div className="cuadroDescuentos">
 					<h6><strong>Descuento</strong></h6>
 					<p className="precio">{"$" + this.props.descuento.precio}</p>
 					<p className="descripcion">{"Descripción: "+ this.props.descuento.descripcion}</p>

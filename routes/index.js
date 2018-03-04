@@ -1,17 +1,24 @@
-var express = require('express');
-var router = express.Router();
-var mongodb =require("mongodb");
+/*
+Tomas Venegas: cambiar let por let 
+ */
+let express = require('express');
+let router = express.Router();
+let mongodb =require("mongodb");
 
-//var url = "mongodb://localhost:27017/mongo_restaurantes";
-var url = process.env.MONGODB||"mongodb://localhost:27017/heroku_pw509l3r";
+
+//let url = "mongodb://localhost:27017/mongo_restaurantes";
+let url = process.env.MONGODB||"mongodb://localhost:27017/heroku_pw509l3r";
 function getRestaurantes(callBack){
 	mongodb.connect(url, (err, dbm)=>{
 		if(err) throw err;
 
-		// ESTO NO FUNCIONA PARA MONGO > VERSION 3.0  var tweets =  dbm.collection("tweets");
+		// ESTO NO FUNCIONA PARA MONGO > VERSION 3.0  let tweets =  dbm.collection("tweets");
 		// const mydb = dbm.db("mongo_restaurantes");
+    /*
+		Tomas Venegas: deberían hostear la base de datos en un servidor externo y guardar estos datos en una varible de entorno
+*/
 		const mydb = dbm.db("heroku_pw509l3r");
-		var restaurantes = mydb.collection("restaurantes");
+		let restaurantes = mydb.collection("restaurantes");
 
 
 		restaurantes.find({}).toArray((err2, restaurantes)=>{
@@ -31,8 +38,8 @@ function postLike(_nombre, callback){
 		// const mydb = dbm.db("mongo_restaurantes");
 		const mydb = dbm.db("heroku_pw509l3r");
 
-		var myquery = { nombre: _nombre };
-		var incLike = { $inc: {calificacion:1} };
+		let myquery = { nombre: _nombre };
+		let incLike = { $inc: {calificacion:1} };
 
 		mydb.collection("restaurantes").updateOne(myquery, incLike, function(err, res) {
 			if (err) throw err;
@@ -59,9 +66,9 @@ function getLikes(_nombre, callback){
 
 		const mydb = dbm.db("mongo_restaurantes");
 
-		var myquery = { nombre: _nombre };
+		let myquery = { nombre: _nombre };
 
-		var x =mydb.collection("restaurantes").findOne(myquery, { calificacion: 1}, function(err, res) {
+		let x =mydb.collection("restaurantes").findOne(myquery, { calificacion: 1}, function(err, res) {
 			if (err) throw err;
 			callback(x);
 			console.log("variable x dentro de findOne: " + x);
