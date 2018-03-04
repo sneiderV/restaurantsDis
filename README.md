@@ -12,11 +12,20 @@ MongoDB, Nodejs, Expressjs, JavaScript.
 React, JavaScript, CSS, Bootstrap, [Material design for Bootstrap](https://fezvrasta.github.io/bootstrap-material-design/)
 
 ### Despliegue
-Si desea mirar el estado actual de nuestra aplicación, solo necesita abrir en su navegador favorito la siguiente URL: https://restaurantsdis.herokuapp.com/ , pero si usted prefiere descargar nuestro proyecto, debe ejecutar los siguientes comandos: 
+Si desea mirar el estado actual de nuestra aplicación, solo necesita abrir en su navegador favorito la siguiente URL: https://restaurantsdis.herokuapp.com/ , pero si usted prefiere descargar nuestro proyecto, debe ejecutar los siguientes comandos en el momento de descarga: 
 * En el directorio raíz del proyecto 
   > npm i 
 * En el directorio /front
   > npm i  
+  
+Cada vez que quiera ejecutar el proyecto, es necesario usar los siguientes comandos:
+
+* En el directorio /front
+  > npm run build
+* En el direcorio raíz del proyecto
+  > npm start
+
+Tras realizar estos pasos, podrá visualizar la página web en la url http://localhost:3001/
   
 nota: Recuerde que estamos usando una base de datos en Mongo, entonces debe contar con MongoDB en su equipo e importar el archivo restaurantes.json a una nueva base de datos en su equipo.
 
