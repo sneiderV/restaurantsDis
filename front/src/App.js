@@ -17,7 +17,10 @@ class App extends Component{
     fetch("/restaurantes",{method:"GET", headers:{accept:"application/json"}})
     .then((res)=>{
       if(res.ok)
-        return res.json();
+      {
+        let restaurantesResponse = res.json();
+        return restaurantesResponse;
+      }
     })
     .then((_restaurantes)=>{
       this.setState({
@@ -46,8 +49,21 @@ class App extends Component{
   searchCalifi(_type){
     this.setState({
       searchCalifi: _type
-    })
+    });
   }
+  updateCalificaciones(_restaurante, _calificacion){
+    let _restaurantes = this.state.restaurantes.map((res)=>{
+      if(res.nombre === _restaurante)
+        res.calificacion = _calificacion;
+      return res;
+
+    });
+     
+    this.setState({
+      restaurantes: _restaurantes
+    });
+  }
+
   compareGrade(jsonGrade, stateGrade){
     if(stateGrade === "") return true;
     else{
@@ -65,7 +81,9 @@ class App extends Component{
                     searchCalifi={this.searchCalifi.bind(this)} />
         </div>
 
-        <RestauranteList restaurantes={ this.state.restaurantes
+        <RestauranteList 
+          updateCalificaciones={this.updateCalificaciones.bind(this)}
+          restaurantes={ this.state.restaurantes
           .filter( (r)=>{return r.nombre.toUpperCase()
                             .startsWith(this.state.searchName.toUpperCase());} )
           .filter( (re)=>{return re.tipo_restaurante.toUpperCase()

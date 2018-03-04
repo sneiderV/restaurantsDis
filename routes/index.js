@@ -24,7 +24,7 @@ function getRestaurantes(callBack){
 }
 
 //agregamos en uno los likes
-function postLike(_nombre){
+function postLike(_nombre, callback){
 	mongodb.connect(url, function(err, dbm) {
 		if (err) throw err;
 
@@ -40,32 +40,40 @@ function postLike(_nombre){
 			dbm.close();
 		});
 
+		let restaurantes = mydb.collection("restaurantes");
+		let projection = {calificacion: 1};
+		restaurantes.find(myquery, projection).toArray((err2, _restaurantes)=>{
+			if(err2) throw err2;
+
+			callback(_restaurantes);
+		})
+
 		
 
 	});
 }
 
-// function getLikes(_nombre){
-// 	mongodb.connect(url, function(err, dbm) {
-// 		if (err) throw err;
+function getLikes(_nombre, callback){
+	mongodb.connect(url, function(err, dbm) {
+		if (err) throw err;
 
-// 		const mydb = dbm.db("mongo_restaurantes");
+		const mydb = dbm.db("mongo_restaurantes");
 
-// 		var myquery = { nombre: _nombre };
+		var myquery = { nombre: _nombre };
 
-// 		var x =mydb.collection("restaurantes").findOne(myquery, { calificacion: 1}, function(err, res) {
-// 			if (err) throw err;
-// 			console.log(res);
-// 		console.log("dentro de findOne ");
-// 			dbm.close();
-// 		})
-// 		console.log("retorna " + JSON.stringify(x));
-// 		;
+		var x =mydb.collection("restaurantes").findOne(myquery, { calificacion: 1}, function(err, res) {
+			if (err) throw err;
+			callback(x);
+			console.log("variable x dentro de findOne: " + x);
+			dbm.close();
+		})
+		console.log("retorna " + JSON.stringify(x));
+		;
 
 		
 
-// 	});
-// }
+	});
+}
 
 
 /* GET home page. */
@@ -81,9 +89,13 @@ router.post('/post-like', function(req, res){
 	//console.log("req: "+req);
 	console.log("body: "+JSON.stringify(req.body));
 	const name = req.body.nombre;
-	res.json(req.body);
-	postLike(name);
-	// getLikes(name);
+	postLike(name,(restaurantes)=>{
+		let likes = restaurantes[0].calificacion;
+		console.log("se envian #likes de "+name+": " + likes);
+		res.json({calificacion:likes});
+
+	});
+	// getLikes(name,(calificacion)=>{ res.send(calificacion.json());	console.log(calificacion);	});
 });
 
 module.exports = router;

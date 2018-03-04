@@ -14,12 +14,21 @@ class Restaurante extends Component{
 		});
 	}
 
+	updateCalificacion(_calificacion){
+		this.props.updateCalificaciones(this.props.restaurante.nombre, _calificacion)
+	}
+
 	alerta(){
-		fetch("/post-like",{method:"POST", body:JSON.stringify({"nombre":this.props.restaurante.nombre}), headers: {'content-type':"application/json"}})
+		fetch("/post-like",{method:"POST", body:JSON.stringify({"nombre":this.props.restaurante.nombre}), 
+			headers: {'content-type':"application/json"}})
 		.then((res)=>{
 			if(res.ok)
 				return res.json();
-		})	}
+				//let likes = res.json();
+		}
+		).then((_calificacion)=>{
+			this.updateCalificacion(_calificacion.calificacion);
+		})}
 
 		render(){
 			return(<div> 

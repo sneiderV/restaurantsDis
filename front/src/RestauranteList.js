@@ -8,12 +8,14 @@ class RestauranteList extends Component{
 		super(props);
 	}
 
+	
+
 	renderRestaurantes(){
 		return this.props.restaurantes.map((t,i)=>{
 			return ( 
 				<div class="col-md">
 					<div class="cuadroRestaurante">
-						<Restaurante restaurante={t} key={i}/>
+						<Restaurante restaurante={t} key={i} updateCalificaciones={this.props.updateCalificaciones}/>
 					</div>
 				</div> 
 				); 
