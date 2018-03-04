@@ -8,13 +8,15 @@ class RestauranteList extends Component{
 		super(props);
 	}
 
-	
 
+    /*
+    Tomas Venegas: esto les generará un error cambiar class por className
+     */
 	renderRestaurantes(){
 		return this.props.restaurantes.map((t,i)=>{
 			return ( 
-				<div class="col-md">
-					<div class="cuadroRestaurante">
+				<div className="col-md">
+					<div className="cuadroRestaurante">
 						<Restaurante restaurante={t} key={i} updateCalificaciones={this.props.updateCalificaciones}/>
 					</div>
 				</div> 
@@ -22,8 +24,8 @@ class RestauranteList extends Component{
 		});
 	}
 	render(){
-		return(<div class="container">
-			<div class="row">
+		return(<div className="container">
+			<div className="row">
 			{this.props.restaurantes ? this.renderRestaurantes() : "no hay restaurantes"}
 			</div>
 

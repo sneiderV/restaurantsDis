@@ -31,35 +31,38 @@ class Restaurante extends Component{
 		})}
 
 		render(){
+            /*
+    Tomas Venegas: esto les generará un error cambiar class por className
+     */
 			return(<div> 
 				<div className="name"><h5>{this.props.restaurante.nombre}</h5></div>
-				<div class="row justify-content-sm-center">
-					<div class="col-sm"></div>
-					<div class="col-sm"><img className="imagen" src={this.props.restaurante.image_url} alt={this.props.restaurante.nombre + " logo"}/></div>
-					<div class="col-sm"></div>
+				<div className="row justify-content-sm-center">
+					<div className="col-sm"></div>
+					<div className="col-sm"><img className="imagen" src={this.props.restaurante.image_url} alt={this.props.restaurante.nombre + " logo"}/></div>
+					<div className="col-sm"></div>
 				</div>
 				<p className="calificacion"><strong><i>{"numero de likes: "+this.props.restaurante.calificacion}</i></strong></p>
 				<p className="description">{this.props.restaurante.descripcion}</p>
-				<div class = "container-fluid">
-					<div class="row">
-					<div class = "col-sm">
+				<div className= "container-fluid">
+					<div className="row">
+					<div className= "col-sm">
 						
 							{this.props.restaurante.descuentos ? this.renderDescuentos() : "no hay descuentos"}
 					
 					</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-1"></div>	
-					<div class="col-sm">
+				<div className="row">
+					<div className="col-sm-1"></div>	
+					<div className="col-sm">
 						<p>Danos un like
-						<fieldset enabled><button type="button" class="btn btn-danger bmd-btn-fab"onClick={this.alerta.bind(this)}>
+						<fieldset enabled><button type="button" className="btn btn-danger bmd-btn-fab"onClick={this.alerta.bind(this)}>
 						 							<img src="/like.png" alt="logito"/>
 						 					</button>
 						 </fieldset> 
 						 </p> 
 					</div>
-					<div class="col-sm-1"></div>
+					<div className="col-sm-1"></div>
 				</div>
 
 								<br/>

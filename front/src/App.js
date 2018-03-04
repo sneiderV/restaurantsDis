@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 import RestauranteList from "./RestauranteList.js";
 import SearchBox from "./SearchBox.js"
+/*
+Tomas Venegas: Hace falta un comentario para identificar lo que hace cada clase
+ */
 class App extends Component{
   constructor(props){
     super(props);
