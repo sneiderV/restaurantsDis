@@ -38,7 +38,7 @@ class Restaurante extends Component{
 					<div class="col-sm"><img className="imagen" src={this.props.restaurante.image_url} alt={this.props.restaurante.nombre + " logo"}/></div>
 					<div class="col-sm"></div>
 				</div>
-				<p className="calificacion"><i>{"numero de likes: "+this.props.restaurante.calificacion}</i></p>
+				<p className="calificacion"><strong><i>{"numero de likes: "+this.props.restaurante.calificacion}</i></strong></p>
 				<p className="description">{this.props.restaurante.descripcion}</p>
 				<div class = "container-fluid">
 					<div class="row">
@@ -53,9 +53,12 @@ class Restaurante extends Component{
 					<div class="col-sm-1"></div>	
 					<div class="col-sm">
 						<p>Danos un like
-						<button type="button" class="btn btn-success bmd-btn-fab bmd-btn-fab-sm"onClick={this.alerta.bind(this)}>
-							<img src="/like.png" alt="logito"/>
-						</button> </p> </div>
+						<fieldset disabled><button type="button" class="btn btn-danger bmd-btn-fab"onClick={this.alerta.bind(this)}>
+						 							<img src="/like.png" alt="logito"/>
+						 					</button>
+						 </fieldset> 
+						 </p> 
+					</div>
 					<div class="col-sm-1"></div>
 				</div>
 
