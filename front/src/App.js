@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import RestauranteList from "./RestauranteList.js";
 import SearchBox from "./SearchBox.js"
+// sería buena tener en algún lado de la página una breve descripción de la página,
+// exposición de las funcionalidades y cómo utilizarla
 class App extends Component{
   constructor(props){
     super(props);
