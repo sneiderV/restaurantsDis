@@ -36,6 +36,11 @@ export default class SearchBox extends Component{
 					</div>
 				</div>
 			
+				{
+					// En los input de tipo de restaurante y tipo de comida, sería ideal mostrarle al usuario cuáles son las opciones
+					// que pueden haber, si bien como que él pueda escoger al estilo <select> o mostrandole una lista en algún lado
+					// de la página para que el usuario sepa las categorías, en vez de tratar de adivinarlas
+				}
 				<div class="col-sm">
 					<div class="form-group">
 						<label for="ip2" class="bmd-label-floating">Tipo de restaurante</label>
@@ -52,6 +57,10 @@ export default class SearchBox extends Component{
 			
 				<div class="col-sm">
 					<div class="form-group">
+						{
+							// Al usuario podría interesarle más cuáles son los restaurantes con más likes o
+							// menos likes que lo que pone en el input, en vez de la cantidad exacta.
+						}
 						<label for="ip4" class="bmd-label-floating">Cantidad de likes</label>
 						<input id="ip4"  class="form-control" type="number" onInput={this.onEnterCalifi.bind(this)}/>
 					</div>
